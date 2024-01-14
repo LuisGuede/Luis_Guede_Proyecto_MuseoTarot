@@ -1,0 +1,1507 @@
+/* ----------- Thes are my Setting ----------- */
+
+* {
+    padding: 0%;   
+    margin: 0%;
+    border: none;  
+    box-sizing: border-box;
+}
+
+:root /* My global colors*/ {
+    --frist-color: #2b1825; /* Color principal */
+    --second-color: #392433; /* Color segundario */
+    --second-color-tinte: #966a89; /* Color segundario tinte*/
+    --tertiary-color: #EEE7DA; /* Color terciario*/
+
+    --white-color: #FEFEFE; /* Color for body text*/
+    --black-color: #111121;
+    --radius: 0.6em; /* button and some img radius*/
+}
+
+::-webkit-scrollbar { /* No aparece la barra de scroll lateral */
+    display: none;
+}
+
+body {
+    width: 100%;
+    background-color: var(--tertiary-color);
+
+    /* This solved my floating footer*/
+    position: relative;
+    min-height: 100vh;
+}
+
+source {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--tertiary-color);
+    background-color: var(--second-color);
+}
+
+a:hover {
+    color: var(--tertiary-color);
+}
+
+.header__menu a:hover, .footer__menu a:hover{
+    color: var(--second-color-tinte);
+}
+
+li {
+    list-style: none;
+    color: var(--tertiary-color);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    padding: 1em;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--tertiary-color);
+    background-color: var(--second-color);
+}
+
+h1, h2, h3, li, label, a, p { 
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: normal;
+    font-style: normal;
+}
+
+a {
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+p {
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* ----------- Thes is the end of my Setting ----------- */
+
+/* This is my CSS Intro */
+
+  .intro__logo__container {
+    height: 100vh; 
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--frist-color);
+  }
+
+  .intro__logo {
+    width: 45rem;
+    /* animación obligada por Rúbrica.. pero esta genial */
+    animation-duration: 1s;
+    animation-name: slidein;
+    animation-direction: alternate;
+  }
+
+  /* animation activation in the intro */
+  @keyframes slidein {
+    from {
+      margin-top: 100%;
+      width: 200%;
+    }
+  }
+
+  .intro__button {
+    padding: 1.4em;
+    font-size: 1rem;
+    font-weight: bold;
+    border: solid 0.2em var(--tertiary-color);
+    border-radius: var(--radius);
+  }
+
+  .intro__button:hover {
+    background-color: var(--frist-color);
+  }
+
+/* This is the end of my CSS Intro */
+
+/* This is my CSS Header*/
+
+.container {
+    position: relative;
+}
+
+.header {
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    position: fixed; /* position: fixed; for my scrolling effect */
+    padding: 2em 4em;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--second-color);
+}
+
+.header__logo {
+    width: 40rem;  
+}
+
+.header__responsiveMenue__Button {
+    width: 4rem;
+    display: none;
+}
+
+.header__menu {
+    gap: 3rem;
+    display: flex;
+    text-transform: uppercase;
+}
+
+.header__responsiveMenue {
+    z-index: 1; /* to prevent it from being under the cards */
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    position: fixed;
+    background-color: var(--second-color);
+}
+
+.header__responsiveMenue__menu {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4em;
+    padding-left: 2em;
+    padding-top: 7em;
+    font-size: 1.3rem;
+}
+
+.header__menu a {
+    font-size: 1.5rem;
+}
+
+.header__responsiveMenue__close {
+    top: 2em;
+    right: 2em;
+    width: 5rem;
+    position: absolute;
+}
+
+/* activation for my responsive button (hambunger)*/
+.is__active {
+    display: block;
+}
+
+/* This is the end my CSS Header */
+
+/* This is my CSS body (my cards section) */
+
+.flip__card__container {
+    padding-top: 10em;
+}
+
+.flip__card__grid__container {
+    gap: 1%;
+    padding: 3em 2.5em 15em;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    /* the grid of cards */
+    grid-template-columns: repeat(auto-fill, minmax(max(181px, 100%/4), 1fr));
+}   
+
+.flip__card__inner, .flip__card__front, .flip__card__back {
+    width: 100%;
+    height: 100%;
+}
+
+.flip__card {
+    padding: 1.4em;
+    width: 100%;
+    height: 100%;
+    perspective: 5000px; /* for some reason this value works better in px than em and en */
+    background-color: transparent;
+}
+
+.flip__card__inner {
+    transition: transform 0.6s;
+    transform-style: preserve-3d; 
+}
+
+.flip__card:hover .flip__card__inner {
+    transform: rotateY(180deg);
+}
+
+.flip__card__front, .flip__card__back {
+    top:0;
+    cursor: pointer;
+    object-fit: cover;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden; 
+    /* -webkit-backface-visibility: hidden; */
+
+    border: 7px solid var(--second-color);
+    border-radius: var(--radius);
+}
+
+.flip__card__front img {
+    height: 100%; /*for the border box to fill the cards*/
+}
+
+.flip__card__back {
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transform: rotateY(180deg);
+    background-color: var(--frist-color);
+    /* I repeat the back card so that it does not collide with the front one */
+    background-size: cover;
+    background-image: url("../img/MuseoTarot_cartas_1920px-23.webp");
+}
+
+.flip__card__back__text {
+    text-align: center;
+}
+
+.flip__card__back img {
+    z-index: -1;
+    opacity: 0.15;
+}
+
+/* hide the repeated front card */
+.hidden {
+    visibility:hidden; 
+    pointer-events: none;
+}
+
+/* This is the end of my CSS body (my cards section) */
+
+/* This is my CSS abaoutsUs page */
+
+.abautUs__container {
+    padding: 14em 10em 14em ;
+    margin: auto;
+    background-color: var(--tertiary-color);
+}
+
+.container__info__left {
+    display:grid;
+    grid-template-columns: 1.5fr 1fr;
+}
+
+.container__info__left .text__info__content.text__info__block {
+    padding:3em;
+}
+
+.container__info__left .text__info__content.text__info__block h3, h2, p{
+    padding-bottom: 1rem;
+}
+
+.container__info__left img {
+    object-fit: cover;
+    height: 100%;
+    border-radius: var(--radius);
+}
+
+.abautUs__infoText {
+    padding: 0;
+}
+
+.abautUs__button__container {
+    padding: 2.5em 0em 0em;
+}
+
+.abautUs__infoText__btn {
+    padding: 1.3em;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: var(--radius);
+}
+
+.abautUs__infoText__btn:hover{
+    background-color: var(--frist-color);
+}
+
+.container.services__block {
+    display: flex;
+    flex-direction: column;
+    margin: 2.5rem auto;
+    gap:1rem
+}
+
+.container .services__block__row {
+    display:flex;
+    gap: 1rem;
+    flex-flow: row wrap;
+}
+
+.container .services__block__row .services__block__row__block {
+    display:flex;
+    gap: 1rem;
+    flex-flow: column wrap;
+    min-width: 15.625em;
+
+    flex-grow: 1;
+    flex-basis: 0;
+    border: solid 0.2em var(--frist-color);
+    border-radius: var(--radius);
+    padding: 2em;
+}
+
+.container .services__block__row .services__block__row__block:hover {
+    background-color: var(--frist-color);
+    color: var(--tertiary-color);
+}
+
+/* This is the end of my CSS abaoutsUs page */
+
+/* This is my CSS contacUs page */
+
+.contactUs__contenedor {
+    padding: 14em 10em 14em ;
+    overflow: hidden; 
+}
+
+.contactUs__title__contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contactUs__title{
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--black-color);
+}
+
+.contactUs__text{
+    font-size: 2rem;
+    padding: 2rem 0rem 5rem;
+    color: var(--black-color);
+    font-weight: bold;
+}
+
+.columna {
+    box-sizing: border-box;
+    float: left;
+    padding: 1.25em;
+}
+
+.columna__one {
+    width: 60%;
+}
+
+.columna__two {
+    width: 40%;
+}
+
+.columna__two__text {
+    color: var(--second-color-tinte);
+}
+
+.checkbox__flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 0rem 0rem 1rem;
+}
+
+form {
+    width: 100%;
+}
+
+label {
+    display: block;
+    padding: 0rem 0rem 0.5rem;
+    margin-top: 1.875rem;
+    width: 100%;
+}
+
+input, select {
+    width: 100%;
+    padding: 1.1em;
+    box-sizing: border-box;
+    background-color: var(--white-color);
+}
+
+textarea {
+    width: 100%;
+    height: 6.25rem;
+    resize: none;
+    padding: 0.7em;
+}
+
+.consentimiento {
+    width: 5%;
+    margin-top: 1.875rem;
+}
+
+.form__btn {
+    padding: 1.4em;
+    font-size: 1rem;
+    border-radius: var(--radius);
+}
+
+.form__btn:hover {
+    background-color: var(--frist-color);
+}
+
+/* This is the end of my CSS contacUs page */
+
+/* This is my CSS footer */
+
+.footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 4em 7em;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--second-color);
+
+    /* This solved my floating footer*/
+    position: absolute;
+    bottom: 0;
+}
+
+.footer__logo {
+    width: 30rem; 
+}
+
+.footer__menu {
+    gap: 5rem;
+    display: flex;
+    text-transform: uppercase;
+    color: var(--tertiary-color);
+}
+
+/* This is the end of my CSS footer */
+
+/* Responsive Adaptation (The responsive, is based on the sizes recommended by Google inspector.)*/
+
+/* Desktop 4K - 2560px */
+
+@media screen and (max-width: 2560px) {
+
+    /* Responsive Intro */
+
+    .intro__logo {
+        width: 70rem;
+        margin: 0.5em;
+    }
+
+    .intro__button {
+        padding: 1.7em;
+        font-size: 2rem;
+    }
+
+    /* End of Responsive Intro */
+
+    /* Responsive Header */
+
+    .header {
+        padding: 3em 4em;
+    }
+
+    .header__menu{
+        gap: 5rem;
+    }
+
+    .header__logo {
+        width: 50rem; 
+    }
+
+    .header__menu a{
+        font-size: 2rem;
+    }
+
+    /* End of Responsive Header */
+
+    /* Responsive Cards*/
+
+    .flip__card__container {
+        padding-top: 15em;
+        padding-bottom: 1em;
+    }
+    
+    .flip__card__grid__container {
+        gap: 0%;
+    }  
+
+    p {
+        font-size: 1.8rem;
+        padding: 3.5em;
+    }
+
+    /* End of Responsive Cards*/
+
+    /* This is Responsive abaoutsUs page */
+
+    .abautUs__container {
+        padding: 20em 10em 20em ;
+    }
+
+    .abautUs__button__container{
+        padding: 4.5em 0em 0em;
+    }
+    
+    .abautUs__infoText__btn{
+        padding: 1.5em;
+        font-size: 1.5rem;
+    }
+
+    /* This is the end of my Responsive abaoutsUs page */
+
+    /* This is my Responsive contacsUs page */
+
+    .contactUs__text {
+        font-size: 2.5rem;
+        padding: 2rem 0rem 2rem;
+        text-align: center;
+    }
+
+    .contactUs__contenedor {
+        padding: 20em 25em 15em ;
+    }
+    
+    .columna__two__text {
+        font-size: 2.1rem;
+    }
+
+    /* This is the end of my Responsive contacsUs page */
+
+    /* Responsive footer*/
+
+    .footer {
+        padding: 4em 7em;
+    }
+    
+    .footer__menu a {
+        font-size: 2rem;
+    }
+    
+    /* End of Responsive footer*/
+
+}
+
+/* full Desktop - 1920px */
+
+@media screen and (max-width: 1920px) {
+
+    /* Responsive Intro */
+
+    .intro__logo {
+        width: 45rem;
+    }
+
+    .intro__button {
+        font-size: 1rem;
+    }
+
+    /* End of Responsive Intro */
+
+    /* Responsive Header */
+
+    .header {
+        padding: 2em 4em;
+    }
+
+    .header__menu {
+        gap: 3rem;
+    }
+
+    .header__logo {
+        width: 40rem; 
+    }
+
+    .header__menu a {
+        font-size: 1.5rem;
+    }
+
+    /* End of Responsive Header */
+    
+    /* Responsive Cards*/
+
+    .flip__card__container {
+        padding-top: 10em;
+    }
+
+    .flip__card__grid__container {
+        gap: 0%;
+    }  
+
+    p {
+        font-size: 1.3rem;
+        padding: 1.3em;
+    }
+
+    /* End of Responsive Cards*/
+
+    /* This is Responsive abaoutsUs page */
+
+    .abautUs__container {
+        padding: 15em 10em 15em;
+    }
+
+    .abautUs__button__container{
+        padding: 3.5em 0em 1em;
+    }
+    
+    .abautUs__infoText__btn{
+        font-size: 1.2rem;
+    }
+
+    /* This is the end of my Responsive abaoutsUs page */
+
+    /* This is my Responsive contacsUs page */
+
+    .contactUs__text {
+        font-size: 2rem;
+        padding: 2rem 0rem 2rem;
+        text-align: center;
+    }
+
+    .contactUs__contenedor {
+        padding: 15em 15em 15em ;
+    }
+    
+    .columna__two__text {
+        font-size: 2rem;
+    }
+
+    /* This is the end of my Responsive contacsUs page */
+
+    /* Responsive footer*/
+
+    .footer__menu {
+        gap: 3rem;
+    }
+
+    .footer__menu a {
+        font-size: 1.5rem;
+    }
+    
+    /* End of Responsive footer*/
+}
+
+/* Laptopo L - 1440px */
+
+@media screen and (max-width: 1440px) {
+
+    /* Responsive Intro */
+
+    /* no changes, note to me : 1920px is taking control over 1440px. */
+
+    /* End of Responsive Intro */
+
+    /* Responsive Header */
+
+    .header {
+        padding: 2em 4em;
+    }
+
+    .header__menu {
+        gap: 1.5rem;
+    }
+
+    .header__logo {
+        width: 27rem; 
+    }
+
+    .header__menu a {
+        font-size: 1rem;
+    }
+
+    /* End of Responsive Header */
+
+    /* Responsive Cards*/
+
+    .flip__card {
+        padding: 0.8em;
+    }
+
+    .flip__card__container {
+        padding-top: 8em;
+        padding-bottom: 0.1em;
+    }
+
+    .flip__card__grid__container {
+        gap: 0%;
+        padding: 3em 2em 11em;
+    }
+
+    p {
+        font-size: 0.9rem;
+        padding: 1.5em;
+    } 
+    
+    /* End of Responsive Cards*/
+
+    /* This is Responsive abaoutsUs page */
+
+    .abautUs__container {
+        padding: 10em 3em 10em;
+    }
+
+    .abautUs__infoText__btn{
+        font-size: 1rem;
+    }
+
+
+    
+    /* This is the end of my Responsive abaoutsUs page */
+
+    /* This is my Responsive contacsUs page */
+
+    .contactUs__contenedor {
+        padding: 15em 10em 11em;
+    }
+
+    /* This is the end of my Responsive contacsUs page */
+
+    /* Responsive footer*/
+
+    .footer {
+        padding: 3em 7em;
+    }
+
+    .footer__logo {
+        width: 20rem; 
+    }
+    
+    .footer__menu a {
+        font-size: 1rem;
+    }
+
+    .footer__menu {
+        gap: 2.5rem;
+    }
+    
+    /* End of Responsive footer*/
+    
+}
+
+/* Laptop - 1024px */
+
+@media screen and (max-width: 1024px) {
+
+    /* Responsive Intro */
+
+    .intro__logo {
+        width: 40rem;
+        margin: 0.5em;
+    }
+
+    .intro__button {
+        padding: 1.7em;
+        font-size: 1rem;
+    }
+
+    /* End of Responsive Intro */
+
+    /* Responsive Header */
+
+    .header {
+        padding: 2em 3em;
+    }
+
+    .header__menu {
+        gap: 1.4rem;
+    }
+
+    .header__logo {
+        width: 20rem; 
+    }
+
+    .header__menu a {
+        font-size: 1rem;
+    }
+
+    /* End of Responsive Header */
+
+    /* Responsive Cards*/
+
+    .flip__card__container {
+        padding-top: 6em;
+    }
+
+
+    .flip__card__grid__container {
+        gap: 0%;
+        padding: 3em 2em 10em;
+    }
+
+    p {
+        font-size: 0.7rem;
+        padding: 1.5em;
+    } 
+
+    /* End of Responsive Cards*/ 
+
+    /* This is Responsive abaoutsUs page */
+
+    .abautUs__infoText {
+        font-size: 1rem;
+    }
+
+    .abautUs__container {
+        padding: 10em 5em 10em;
+    }
+
+    .container__info__left .text__info__content.text__info__block {
+        padding: 2em;
+    }
+
+    .container__info__left {
+        flex-direction: column;
+    }
+
+    /* This is the end of my Responsive abaoutsUs page */
+    
+    /* This is my Responsive contacsUs page */
+
+    .contactUs__text {
+        font-size: 2.5rem;
+        padding: 1em 0em 1em;
+        text-align: center;
+    }
+
+    .contactUs__contenedor {
+        padding: 10em 10em 10em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .columna__one {
+        width: 100%;
+    }
+    
+    .columna__two {
+        width: 100%;
+        text-align: left;
+    }
+
+    .columna__two__text {
+        font-size: 2rem;
+    }
+
+    .container__info__left {
+        padding: 0em 0em 0.6em;
+    }
+
+    /* This is the end of my Responsive contacsUs page */
+    
+    /* Responsive footer*/
+
+    .footer {
+        padding: 3em 7em;
+    }
+
+    .footer__logo {
+        width: 15rem; 
+    }
+    
+    .footer__menu {
+        gap: 1.5rem;
+    }
+    
+    /* End of Responsive footer*/
+}
+
+/* Tablet L- 768px */
+
+@media screen and (max-width: 768px) {
+
+    li a{
+        padding: 0.938em; /* 15px cada lado de padding para que se puedan hacer click */
+    }
+
+    /* Responsive Intro */
+
+    .intro__button__container{
+        padding: 0.938em; /* 15px cada lado de padding para que se puedan hacer click */
+    }
+
+    .intro__logo {
+        width: 35rem;
+    }
+
+    /* End of Responsive Intro */
+
+    /* My burger menu starts here*/
+
+    .header__menuContainer {
+        display: none;
+    }
+
+    .header__responsiveMenue__Button {
+        display: block;
+        margin-left: 2em;
+        width: 5rem;
+    }
+
+    /* My burger menu end here*/
+
+    /* Responsive Header */
+
+    .header {
+        padding: 1.5em 3em;
+    }
+
+    .header__logo {
+        width: 30rem; 
+    }
+
+    .header__menu a {
+        font-size: 1rem;
+    }
+
+    .header__responsiveMenue__close {
+        width: 5rem;
+        top: 2em;
+        right: 2em;
+    }
+    
+    /* End of Responsive Header */
+
+    /* Responsive Cards*/
+
+    .flip__card__container {
+        padding-top: 6.5em;
+    }
+
+    .flip__card__grid__container {
+        gap: 0%;
+        padding: 3em 2em 11em;
+    }
+
+    p {
+        font-size: 0.6rem;
+        padding: 1.5em;
+    }
+
+    /* End of Responsive Cards*/  
+    
+    /* This is Responsive abaoutsUs page */
+
+    .abautUs__container {
+        padding: 10em 6em 10em;
+    }
+
+    .abautUs__button__container {
+        /* Puse esto porque por alguna razón, with:100% no funcionaba. */
+        padding: 2em 0em 0em;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .container__info__left .text__info__content.text__info__block {
+        padding: 1em;
+    }
+
+    .container.services__block {
+        margin: 1rem auto;
+    }
+
+    .container__info__left img {
+        margin-bottom: 1em;
+    }
+
+    .container__info__left {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* This is the end of my Responsive abaoutsUs page */
+
+    /* This is my Responsive contacsUs page */
+
+    .contactUs__text {
+        font-size: 2rem;
+        padding: 2rem 0rem 1rem;
+        text-align: center;
+    }
+  
+    .contactUs__contenedor {
+        padding: 12em 5em 9em ;
+    }
+
+    /* This is the end of my Responsive contacsUs page */
+
+    /* Responsive footer*/
+
+    .footer {
+        display: flex;
+        padding: 1.5em 7em;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .footer__logo {
+        width: 20rem; 
+        padding: 1em 1em 1.5em 1em;
+    }
+    
+    .footer__menu a {
+        font-size: 1rem;
+    }
+
+    .footer__menu {
+        gap: 1rem;
+    }
+    
+    /* End of Responsive footer*/
+} 
+
+/* Tablet S - 606px */
+
+@media screen and (max-width: 606px) {
+
+    /* Responsive Intro */
+
+    .intro__logo {
+        width: 26rem;
+        margin: 0.5em;
+    }
+
+    .intro__button {
+        padding: 1.7em;
+        font-size: 1rem;
+    }
+
+    /* End of Responsive Intro */
+
+    /* Responsive Header */
+
+    .header {
+        padding: 1em 2.5em;
+    }
+
+    .header__logo {
+        width: 25rem; 
+    }
+
+    .header__menu a {
+        font-size: 1rem;
+    }
+    
+    .header__responsiveMenue__Button {
+        margin-left: 2em;
+        width: 5rem;
+    }
+
+    .header__responsiveMenue__close {
+        width: 5rem;
+        top: 2em;
+        right: 2em;
+    }
+
+    /* End of Responsive Header */
+
+    /* Responsive Cards*/
+
+    .flip__card__container {
+        padding-top: 5em;
+    }
+
+    .flip__card__grid__container {
+        gap: 0%;
+        padding: 4em 2em 15em;
+    }
+
+    .flip__card {
+        padding: 0.8em;
+    }
+
+    p {
+        font-size: 0.6rem;
+        padding: 1.5em;
+    }
+
+    /* End of Responsive Cards*/ 
+
+    /* This is Responsive abaoutsUs page */
+
+    .abautUs__container {
+        padding: 8.5em 4em 16em;
+    }
+
+    .container__info__left .text__info__content.text__info__block {
+        padding: 0em;
+    }
+
+    .container__info__left img {
+        margin-bottom: 2em;
+    }
+
+    /* This is the end of my Responsive abaoutsUs page */
+
+    /* This is my Responsive contacsUs page */
+
+    .contactUs__text {
+        font-size: 1.5rem;
+        padding: 2rem 0rem 1rem;
+    }
+
+    .contactUs__contenedor {
+        padding: 12em 4em 13em ;
+    }
+
+    .form__btn {
+        width: 100%;
+    }
+
+    /* This is the end of my Responsive contacsUs page */
+
+    /* Responsive footer*/
+
+    .footer__menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    .footer li{
+        font-size: 1.2rem;
+    }
+
+    .footer__logo {
+        width: 20rem; 
+        padding: 1em;
+    }
+    
+    /* End of Responsive footer*/
+} 
+
+/* Mobile L - 425px */
+
+@media screen and (max-width: 425px) {
+
+    /* Responsive Intro */
+
+    .intro__logo {
+        width: 23rem;
+    }
+
+    .intro__button {
+        padding: 1.7em;
+        font-size: 0.8rem;
+    }
+
+    /* End of Responsive Intro */
+
+    /* Responsive Header */
+
+    .header {
+        padding: 1em 1.5em;
+    }
+
+    .header__logo {
+        width: 30rem; 
+    }
+
+    .header__menu a {
+        font-size: 1rem;
+    }
+
+    .header__responsiveMenue__Button {
+        margin-left: 2em;
+        width: 7rem;
+    }
+
+    .header__responsiveMenue__close {
+        width: 5rem;
+        top: 2em;
+        right: 2em;
+    }
+
+    /* End of Responsive Header */
+
+    /* Responsive Cards*/
+
+    .flip__card__container {
+        padding-top: 5em;
+    }
+
+    .flip__card__grid__container {
+        padding: 4em 2em 16em;
+    }
+    
+    p {
+        font-size: 1rem;
+        padding: 1.5em;
+    }
+
+    /* End of Responsive Cards*/
+
+    /* This is Responsive abaoutsUs page */
+
+    .abautUs__container {
+        padding: 9em 3em 16em;
+    }
+
+    /* This is the end of my Responsive abaoutsUs page */
+
+    /* This is my Responsive contacsUs page */
+
+    .contactUs__title {
+        font-size: 1rem;
+    }
+
+    .contactUs__text {
+        font-size: 1.3rem;
+        padding: 1rem 0rem 1rem;
+    }
+
+    .contactUs__contenedor {
+        padding: 10em 1em 13em ;
+    }
+
+    .columna__two__text {
+        font-size: 1.1rem;
+    }
+
+    .form__btn {
+        width: 100%;
+    }
+
+    /* This is the end of my Responsive contacsUs page */
+
+    /* Responsive footer*/
+
+    .footer{
+        padding: 1.5em 5em;
+    }
+
+    /* End of Responsive footer*/
+    
+}
+
+/* Mobile M - 378px */
+
+@media screen and (max-width: 378px) {
+
+    /* Responsive Intro */
+
+    .intro__logo {
+        width: 20rem;
+    }
+
+    .intro__button {
+        padding: 1.5em;
+    }
+
+    /* End of Responsive Intro */
+
+    /* Responsive Header */
+
+    .header {
+        padding: 1em 1.5em;
+    }
+
+    .header__logo {
+        width: 30rem; 
+    }
+
+    .header__menu a {
+        font-size: 1rem;
+    }
+
+    .header__responsiveMenue__Button {
+        margin-left: 2em;
+        width: 8rem;
+    }
+
+    .header__responsiveMenue__close {
+        width: 5rem;
+        top: 2em;
+        right: 2em;
+    }
+
+    /* End of Responsive Header */
+
+    /* Responsive Cards*/
+
+    .flip__card__container {
+        padding-top: 5em;
+    }
+
+    p { 
+        font-size: 0.9rem;
+        padding: 1.5em;
+    }
+
+    /* End of Responsive Cards*/
+
+    /* This is Responsive abaoutsUs page */
+
+    .abautUs__container {
+        padding: 8em 2em 15em;
+    }
+
+    .abautUs__infoText__btn {
+        font-size: 0.8rem;
+    }
+
+    /* This is the end of my Responsive abaoutsUs page *
+
+    /* This is my Responsive contacsUs page */
+
+    .contactUs__title {
+        font-size: 1.7rem;
+    }
+
+    .contactUs__text {
+        font-size: 1.2rem;
+    }
+
+    /* This is the end of my Responsive contacsUs page */
+
+    /* Responsive footer*/
+
+    .footer__logo {
+        width: 17rem; 
+    }
+
+    .footer {
+        padding: 1.5em 3em;
+    }
+
+    /* End of Responsive footer*/
+}
+
+/* Mobile S - 320px */
+
+@media screen and (max-width: 320px) {
+
+    /* Responsive Intro */
+
+    .intro__logo {
+        width: 18rem;
+    }
+
+    .intro__button {
+        padding: 1em;
+        font-size: 0.95rem;
+    }
+
+    /* End of Responsive Intro */
+
+    /* Responsive Header */
+
+    .header {
+        padding: 1em 1.5em;
+    }
+
+    .header__logo {
+        width: 30rem; 
+    }
+
+    .header__menu a {
+        font-size: 0.9rem;
+    }
+
+    .header__responsiveMenue__Button {
+        margin-left: 2em;
+        width: 9rem;
+    }
+
+    .header__responsiveMenue__close {
+        width: 5rem;
+        top: 2em;
+        right: 2em;
+    }
+
+    /* End of Responsive Header */
+
+    /* Responsive Cards*/
+
+    .flip__card__container {
+        padding-top: 5em;
+    }
+
+    .flip__card__grid__container {
+        padding: 4em 1em 15em;
+    }
+
+    p { 
+        font-size: 0.9rem;
+        padding: 1.5em;
+    }
+
+    /* End of Responsive Cards*/ 
+
+    /* This is Responsive abaoutsUs page */
+
+    .abautUs__container {
+        padding: 8em 2em 14em;
+    }
+
+    .abautUs__infoText {
+        font-size: 0.9rem;
+    }
+
+    /* This is the end of my Responsive abaoutsUs page *
+
+    /* This is my Responsive contacsUs page */
+
+    .contactUs__title {
+        font-size: 1.5rem;
+    }
+
+    .contactUs__text {
+        font-size: 1rem;
+        padding: 2rem 0rem 1.5rem;
+    }
+
+    .contactUs__contenedor {
+        padding: 9em 0.5em 12em ;
+    }
+
+    .columna__two__text {
+        font-size: 0.9rem;
+    }
+
+    /* This is the end of my Responsive contacsUs page */
+
+    /* Responsive footer*/
+
+    /* no changes, note to me : 378px is taking control over 320px in the footer. */
+    
+    /* End of Responsive footer*/
+} 

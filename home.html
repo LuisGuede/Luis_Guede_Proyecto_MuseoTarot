@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museo Tarot</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/fun.js" defer></script>
+    <!-- this is my icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.webp">
+    <link rel="icon" type="vectores/svg" sizes="32x32" href="img/favicon-32x32.webp">
+    <link rel="icon" type="vectores/svg" sizes="16x16" href="img/favicon-16x16.webp">
+</head>
+
+<body>
+
+    <div class="container">
+
+    <!-- This is my HTML Header -->
+        <header class="header">
+            <div class="header__logo">
+               <a href="home.html" title="Home"><img class="header__img" src="./vectores/MuseoTarot_Logo.svg" alt="logo" title="MuseoTarotLogo"></a> 
+            </div>
+
+            <nav class="header__menuContainer">
+                <ul class="header__menu">
+                    <li><a href="home.html" title="Home">Home</a></li>
+                    <li><a href="abaoutus.html" title="About Us">About Us</a></li>
+                    <li><a href="contacus.html" title="Contact Us">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- this is my responsive HTML Header button (hambunger)-->
+            <button class="header__responsiveMenue__Button">
+                <img src="./vectores/Hamburger_menu.svg" alt="Hamburger" title="Hamburger">
+            </button>
+        </header>
+
+        <!-- this is my responsive HTML Header colose button -->
+        <div class="header__responsiveMenue">
+            <button class="header__responsiveMenue__close">
+                <img src="./vectores/close_button.svg" alt="close button" title="close button">
+            </button>
+            <nav>
+                <menu class="header__responsiveMenue__menu">
+                    <li><a href="home.html" title="Home">Home</a></li>
+                    <li><a href="abaoutus.html" title="About Us">About Us</a></li>
+                    <li><a href="contacus.html" title="Contact Us">Contact Us</a></li>
+                </menu>
+            </nav>
+        </div>
+
+    <!-- This is the end of my HTML Header -->
+
+    <!-- This is my HTML body (my cards section) -->
+
+    <div class="flip__card__container">
+        <div class="flip__card__grid__container">
+            <div class="flip__card">
+                <div class="flip__card__inner">
+                    <picture> <!-- this is a duplicate image to avoid collision with 3D effect (is hidden with a class)-->
+                        <!-- NOTE: It is not necessary for my the cards to use <source>, because they will not change their position both vertically and horizontally. 
+                            Reducing them would only make them lose resolution. However, if it adapts to large screens, it would be necessary. 
+                            Here is an example from 1440px. -->
+                        <source class="hidden" media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-01.webp">
+                        <img loading="lazy" alt="hidden"  class="hidden" src="img/MuseoTarot_cartas_1920px-01.webp">
+                    </picture>
+                    <div class="flip__card__front">
+                        <picture>
+                            <!-- Original front Img -->
+                            <source media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-01.webp">
+                            <img loading="lazy" src="img/MuseoTarot_cartas_1920px-01.webp" alt="Carta TheFool" title="TheFool">
+                        </picture>
+                    </div>
+                    <div class="flip__card__back">
+                        <p class="flip__card__back__text">
+                            Simboliza un potencial ilimitado y la posibilidad de una nueva y emocionante aventura. Indica la necesidad de dar un salto de fe en el que no sabes qué esperar</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="flip__card">
+                <div class="flip__card__inner">
+                    <picture> <!-- this is a duplicate image to avoid collision with 3D effect (is hidden with a class)-->
+                        <!-- NOTE: It is not necessary for my the cards to use <source>, because they will not change their position both vertically and horizontally. 
+                            Reducing them would only make them lose resolution. However, if it adapts to large screens, it would be necessary. 
+                            Here is an example from 1440px. -->
+                        <source class="hidden" media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-02.webp">
+                        <img loading="lazy" alt="hidden" class="hidden" src="img/MuseoTarot_cartas_1920px-02.webp">
+                    </picture>
+                    <div class="flip__card__front">
+                        <picture>
+                            <!-- Original front Img -->
+                            <source media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-02.webp">
+                            <img loading="lazy" src="img/MuseoTarot_cartas_1920px-02.webp" alt="Carta TheMagician" title="TheMagician">
+                        </picture>
+                    </div>
+                    <div class="flip__card__back">
+                        <p class="flip__card__back__text">
+                            Significa que tienes la determinación para hacer realidad tus deseos, eres poderoso, y el mundo exterior seguirá si creas tu mundo interior</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="flip__card">
+                <div class="flip__card__inner">
+                    <picture> <!-- this is a duplicate image to avoid collision with 3D effect (is hidden with a class)-->
+                        <!-- NOTE: It is not necessary for my the cards to use <source>, because they will not change their position both vertically and horizontally. 
+                            Reducing them would only make them lose resolution. However, if it adapts to large screens, it would be necessary. 
+                            Here is an example from 1440px. -->
+                        <source class="hidden" media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-03.webp">
+                        <img loading="lazy" alt="hidden" class="hidden" src="img/MuseoTarot_cartas_1920px-03.webp">
+                    </picture>
+                    <div class="flip__card__front">
+                        <picture>
+                            <!-- Original front Img -->
+                            <source media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-03.webp">
+                            <img loading="lazy" src="img/MuseoTarot_cartas_1920px-03.webp" alt="Carta TheHighPriestess" title="TheHighPriestess">
+                        </picture>
+                    </div>
+                    <div class="flip__card__back">
+                        <p class="flip__card__back__text">
+                            Aconseja seguir la intuición, no solo la razón, recomienda reflexionar y aprender antes de decidir o actuar</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="flip__card">
+                <div class="flip__card__inner">
+                        <picture> <!-- this is a duplicate image to avoid collision with 3D effect (is hidden with a class)-->
+                        <!-- NOTE: It is not necessary for my the cards to use <source>, because they will not change their position both vertically and horizontally. 
+                            Reducing them would only make them lose resolution. However, if it adapts to large screens, it would be necessary. 
+                            Here is an example from 1440px. -->
+                        <source class="hidden" media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-04.webp">
+                        <img loading="lazy" alt="hidden" class="hidden" src="img/MuseoTarot_cartas_1920px-04.webp">
+                    </picture>
+                    <div class="flip__card__front">
+                        <picture>
+                            <!-- Original front Img -->
+                            <source media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-04.webp">
+                            <img loading="lazy" src="img/MuseoTarot_cartas_1920px-04.webp" alt="Carta TheEmpress" title="TheEmpress">
+                        </picture>
+                    </div>
+                    <div class="flip__card__back">
+                        <p class="flip__card__back__text"> 
+                            Te insta a conectarte con tu lado femenino, fomentando la creatividad y el cuidado propio, busca la belleza y la felicidad, inspirando energía creativa en proyectos</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="flip__card">
+                <div class="flip__card__inner">
+                        <picture> <!-- this is a duplicate image to avoid collision with 3D effect (is hidden with a class)-->
+                        <!-- NOTE: It is not necessary for my the cards to use <source>, because they will not change their position both vertically and horizontally. 
+                            Reducing them would only make them lose resolution. However, if it adapts to large screens, it would be necessary. 
+                            Here is an example from 1440px. -->
+                        <source class="hidden" media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-05.webp">
+                        <img loading="lazy" alt="hidden" class="hidden" src="img/MuseoTarot_cartas_1920px-05.webp">
+                    </picture>
+                    <div class="flip__card__front">
+                        <picture>
+                            <!-- Original front Img -->
+                            <source media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-05.webp">
+                            <img loading="lazy" src="img/MuseoTarot_cartas_1920px-05.webp" alt="Carta TheEmperor" title="TheEmperor">
+                        </picture>
+                    </div>
+                    <div class="flip__card__back">
+                        <p class="flip__card__back__text"> 
+                            Representa estabilidad masculina y liderazgo, aporta seguridad y conocimiento, exigiendo respeto con autoridad. Superando problemas con planificación y perseverancia</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="flip__card">
+                <div class="flip__card__inner">
+                    <picture> <!-- this is a duplicate image to avoid collision with 3D effect (is hidden with a class)-->
+                        <!-- NOTE: It is not necessary for my the cards to use <source>, because they will not change their position both vertically and horizontally. 
+                            Reducing them would only make them lose resolution. However, if it adapts to large screens, it would be necessary. 
+                            Here is an example from 1440px. -->
+                        <source class="hidden" media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-06.webp">
+                        <img loading="lazy" alt="hidden" class="hidden" src="img/MuseoTarot_cartas_1920px-06.webp">
+                    </picture>
+                    <div class="flip__card__front">
+                        <picture>
+                            <!-- Original front Img -->
+                            <source media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-06.webp">
+                            <img loading="lazy" src="img/MuseoTarot_cartas_1920px-06.webp" alt="Carta TheHierophant" title="TheHierophant">
+                        </picture>
+                    </div>
+                    <div class="flip__card__back">
+                        <p class="flip__card__back__text"> 
+                            Sugiere seguir convenciones y reglas establecidas, aconseja mantener límites tradicionales en lugar de romper normas, enfocándote en tradiciones, creencias</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="flip__card">
+                <div class="flip__card__inner">
+                    <picture> <!-- this is a duplicate image to avoid collision with 3D effect (is hidden with a class)-->
+                        <!-- NOTE: It is not necessary for my the cards to use <source>, because they will not change their position both vertically and horizontally. 
+                            Reducing them would only make them lose resolution. However, if it adapts to large screens, it would be necessary. 
+                            Here is an example from 1440px. -->
+                        <source class="hidden" media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-07.webp">
+                        <img loading="lazy" alt="hidden" class="hidden" src="img/MuseoTarot_cartas_1920px-07.webp">
+                    </picture>
+                    <div class="flip__card__front">
+                        <picture>
+                            <!-- Original front Img -->
+                            <source media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-07.webp">
+                            <img loading="lazy" src="img/MuseoTarot_cartas_1920px-07.webp" alt="Carta TheLovers" title="TheLovers">
+                        </picture>
+                    </div>
+                    <div class="flip__card__back">
+                        <p class="flip__card__back__text"> 
+                            Se refiere a decisiones significativas generando incertidumbre sobre en quién confiar, aconseja evitar la tentación y la ruta fácil</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="flip__card">
+                <div class="flip__card__inner">
+                    <picture> <!-- this is a duplicate image to avoid collision with 3D effect (is hidden with a class)-->
+                        <!-- NOTE: It is not necessary for my the cards to use <source>, because they will not change their position both vertically and horizontally. 
+                            Reducing them would only make them lose resolution. However, if it adapts to large screens, it would be necessary. 
+                            Here is an example from 1440px. -->
+                        <source class="hidden" media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-08.webp">
+                        <img loading="lazy" alt="hidden" class="hidden" src="img/MuseoTarot_cartas_1920px-08.webp">
+                    </picture>
+                    <div class="flip__card__front">
+                        <picture>
+                            <!-- Original front Img -->
+                            <source media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-08.webp">
+                            <img loading="lazy" src="img/MuseoTarot_cartas_1920px-08.webp" alt="Carta TheChariot" title="TheChariot">
+                        </picture>
+                    </div>
+                    <div class="flip__card__back">
+                        <p class="flip__card__back__text"> 
+                            Sugiere que es el momento de alcanzar tus deseos con determinación y enfoque, sintiéndote motivado, ambicioso y en control</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="flip__card">
+                <div class="flip__card__inner">
+                    <picture> <!-- this is a duplicate image to avoid collision with 3D effect (is hidden with a class)-->
+                        <!-- NOTE: It is not necessary for my the cards to use <source>, because they will not change their position both vertically and horizontally. 
+                            Reducing them would only make them lose resolution. However, if it adapts to large screens, it would be necessary. 
+                            Here is an example from 1440px. -->
+                        <source class="hidden" media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-09.webp">
+                        <img loading="lazy" alt="hidden" class="hidden" src="img/MuseoTarot_cartas_1920px-09.webp">
+                    </picture>
+                    <div class="flip__card__front">
+                        <picture>
+                            <!-- Original front Img -->
+                            <source media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-09.webp">
+                            <img loading="lazy" src="img/MuseoTarot_cartas_1920px-09.webp" alt="Carta Strength" title="Strength">
+                        </picture>
+                    </div>
+                    <div class="flip__card__back">
+                        <p class="flip__card__back__text"> 
+                            Simboliza fuerza, coraje y paciencia, indicando que puedes superar obstáculos como el TheChariot. Se aconseja actuar con gracia en lugar de la fuerza bruta</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="flip__card">
+                <div class="flip__card__inner">
+                    <picture> <!-- this is a duplicate image to avoid collision with 3D effect (is hidden with a class)-->
+                        <!-- NOTE: It is not necessary for my the cards to use <source>, because they will not change their position both vertically and horizontally. 
+                            Reducing them would only make them lose resolution. However, if it adapts to large screens, it would be necessary. 
+                            Here is an example from 1440px. -->
+                        <source class="hidden" media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-10.webp">
+                        <img loading="lazy" alt="hidden" class="hidden" src="img/MuseoTarot_cartas_1920px-10.webp">
+                    </picture>
+                    <div class="flip__card__front">
+                        <picture>
+                            <!-- Original front Img -->
+                            <source media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-10.webp">
+                            <img loading="lazy" src="img/MuseoTarot_cartas_1920px-10.webp" alt="Carta TheHermit" title="TheHermit">
+                        </picture>
+                    </div>
+                    <div class="flip__card__back">
+                        <p class="flip__card__back__text"> 
+                            Representa un tiempo de crecimiento personal guiado por la sabiduría en busca de la verdad más elevada, a menudo requiriendo soledad y introspección</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="flip__card">
+                <div class="flip__card__inner">
+                    <picture> <!-- this is a duplicate image to avoid collision with 3D effect (is hidden with a class)-->
+                        <!-- NOTE: It is not necessary for my the cards to use <source>, because they will not change their position both vertically and horizontally. 
+                            Reducing them would only make them lose resolution. However, if it adapts to large screens, it would be necessary. 
+                            Here is an example from 1440px. -->
+                        <source class="hidden" media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-11.webp">
+                        <img loading="lazy" alt="hidden" class="hidden" src="img/MuseoTarot_cartas_1920px-11.webp">
+                    </picture>
+                    <div class="flip__card__front">
+                        <picture>
+                            <!-- Original front Img -->
+                            <source media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-11.webp">
+                            <img loading="lazy" src="img/MuseoTarot_cartas_1920px-11.webp" alt="Carta WheelofFortune" title="WheelofFortune">
+                        </picture>
+                    </div>
+                    <div class="flip__card__back">
+                        <p class="flip__card__back__text"> 
+                            Indica suerte, ya sea que creas en el destino o no, las cosas se están alineando a tu favor, brindándote sorprendentes ofertas y nuevas oportunidades</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="flip__card">
+                <div class="flip__card__inner">
+                    <picture> <!-- this is a duplicate image to avoid collision with 3D effect (is hidden with a class)-->
+                        <!-- NOTE: It is not necessary for my the cards to use <source>, because they will not change their position both vertically and horizontally. 
+                            Reducing them would only make them lose resolution. However, if it adapts to large screens, it would be necessary. 
+                            Here is an example from 1440px. -->
+                        <source class="hidden" media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-12.webp">
+                        <img loading="lazy" alt="hidden" class="hidden" src="img/MuseoTarot_cartas_1920px-12.webp">
+                    </picture>
+                    <div class="flip__card__front">
+                        <picture>
+                            <!-- Original front Img -->
+                            <source media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-12.webp">
+                            <img loading="lazy" src="img/MuseoTarot_cartas_1920px-12.webp" alt="Carta Justice" title="Justice">
+                        </picture>
+                    </div>
+                    <div class="flip__card__back">
+                        <p class="flip__card__back__text"> 
+                            Simboliza causa, efecto, y pensamiento y acción equilibrados. En casos de injusticia o daño, la Justicia llega para restablecer el equilibrio y el orden</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="flip__card">
+                <div class="flip__card__inner">
+                    <picture> <!-- this is a duplicate image to avoid collision with 3D effect (is hidden with a class)-->
+                        <!-- NOTE: It is not necessary for my the cards to use <source>, because they will not change their position both vertically and horizontally. 
+                            Reducing them would only make them lose resolution. However, if it adapts to large screens, it would be necessary. 
+                            Here is an example from 1440px. -->
+                        <source class="hidden" media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-13.webp">
+                        <img loading="lazy" alt="hidden" class="hidden" src="img/MuseoTarot_cartas_1920px-13.webp">
+                    </picture>
+                    <div class="flip__card__front">
+                        <picture>
+                            <!-- Original front Img -->
+                            <source media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-13.webp">
+                            <img loading="lazy" src="img/MuseoTarot_cartas_1920px-13.webp" alt="Carta TheHangedMan" title="TheHangedMan">
+                        </picture>
+                    </div>
+                    <div class="flip__card__back">
+                        <p class="flip__card__back__text"> 
+                            Representa la espera inevitable en la vida, aunque no siempre nos gusta quedarnos en un limbo, a veces es necesario, incluso si implica sacrificios</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="flip__card">
+                <div class="flip__card__inner">
+                    <picture> <!-- this is a duplicate image to avoid collision with 3D effect (is hidden with a class)-->
+                        <!-- NOTE: It is not necessary for my the cards to use <source>, because they will not change their position both vertically and horizontally. 
+                            Reducing them would only make them lose resolution. However, if it adapts to large screens, it would be necessary. 
+                            Here is an example from 1440px. -->
+                        <source class="hidden" media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-14.webp">
+                        <img loading="lazy" alt="hidden" class="hidden" src="img/MuseoTarot_cartas_1920px-14.webp">
+                    </picture>
+                    <div class="flip__card__front">
+                        <picture>
+                            <!-- Original front Img -->
+                            <source media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-14.webp">
+                            <img loading="lazy" src="img/MuseoTarot_cartas_1920px-14.webp" alt="Carta Death" title="Death">
+                        </picture>
+                    </div>
+                    <div class="flip__card__back">
+                        <p class="flip__card__back__text"> 
+                            Señala el cierre de un capítulo, dejar atrás el pasado y eliminar lo innecesario, marcando una transición entre fases de la vida</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="flip__card">
+                <div class="flip__card__inner">
+                    <picture> <!-- this is a duplicate image to avoid collision with 3D effect (is hidden with a class)-->
+                        <!-- NOTE: It is not necessary for my the cards to use <source>, because they will not change their position both vertically and horizontally. 
+                            Reducing them would only make them lose resolution. However, if it adapts to large screens, it would be necessary. 
+                            Here is an example from 1440px. -->
+                        <source class="hidden" media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-15.webp">
+                        <img loading="lazy" alt="hidden" class="hidden" src="img/MuseoTarot_cartas_1920px-15.webp">
+                    </picture>
+                    <div class="flip__card__front">
+                        <picture>
+                            <!-- Original front Img -->
+                            <source media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-15.webp">
+                            <img loading="lazy" src="img/MuseoTarot_cartas_1920px-15.webp" alt="Carta Temperance" title="Temperance">
+                        </picture>
+                    </div>
+                    <div class="flip__card__back">
+                        <p class="flip__card__back__text" 
+                        >Evita extremos y practica la paciencia en situaciones complicadas, no reacciones de inmediato; la Templanza es una habilidad que mejora con la práctica</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="flip__card">
+                <div class="flip__card__inner">
+                    <picture> <!-- this is a duplicate image to avoid collision with 3D effect (is hidden with a class)-->
+                        <!-- NOTE: It is not necessary for my the cards to use <source>, because they will not change their position both vertically and horizontally. 
+                            Reducing them would only make them lose resolution. However, if it adapts to large screens, it would be necessary. 
+                            Here is an example from 1440px. -->
+                        <source class="hidden" media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-16.webp">
+                        <img loading="lazy" alt="hidden" class="hidden" src="img/MuseoTarot_cartas_1920px-16.webp">
+                    </picture>
+                    <div class="flip__card__front">
+                        <picture>
+                            <!-- Original front Img -->
+                            <source media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-16.webp">
+                            <img loading="lazy" src="img/MuseoTarot_cartas_1920px-16.webp" alt="Carta TheDevil" title="TheDevil">
+                        </picture>
+                    </div>
+                    <div class="flip__card__back">
+                        <p class="flip__card__back__text"> 
+                            La carta de la ilusión y advierte sobre el peligro de la adicción, enfócate en lo que realmente importa en lugar de satisfacer deseos excesivos</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="flip__card">
+                <div class="flip__card__inner">
+                    <picture> <!-- this is a duplicate image to avoid collision with 3D effect (is hidden with a class)-->
+                        <!-- NOTE: It is not necessary for my the cards to use <source>, because they will not change their position both vertically and horizontally. 
+                            Reducing them would only make them lose resolution. However, if it adapts to large screens, it would be necessary. 
+                            Here is an example from 1440px. -->
+                        <source class="hidden" media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-17.webp">
+                        <img loading="lazy" alt="hidden" class="hidden" src="img/MuseoTarot_cartas_1920px-17.webp">
+                    </picture>
+                    <div class="flip__card__front">
+                        <picture>
+                            <!-- Original front Img -->
+                            <source media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-17.webp">
+                            <img loading="lazy" src="img/MuseoTarot_cartas_1920px-17.webp" alt="Carta TheTower" title="TheTower">
+                        </picture>
+                    </div>
+                    <div class="flip__card__back">
+                        <p class="flip__card__back__text"> 
+                            Simboliza destrucción y cambios drásticos, antes de un nuevo comienzo, enfrenta la verdad sobre la situación</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="flip__card">
+                <div class="flip__card__inner">
+                    <picture> <!-- this is a duplicate image to avoid collision with 3D effect (is hidden with a class)-->
+                        <!-- NOTE: It is not necessary for my the cards to use <source>, because they will not change their position both vertically and horizontally. 
+                            Reducing them would only make them lose resolution. However, if it adapts to large screens, it would be necessary. 
+                            Here is an example from 1440px. -->
+                        <source class="hidden" media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-18.webp">
+                        <img loading="lazy" alt="hidden" class="hidden" src="img/MuseoTarot_cartas_1920px-18.webp">
+                    </picture>
+                    <div class="flip__card__front">
+                        <picture>
+                            <!-- Original front Img -->
+                            <source media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-18.webp">
+                            <img loading="lazy" src="img/MuseoTarot_cartas_1920px-18.webp" alt="Carta TheStar" title="TheStar">
+                        </picture>
+                    </div>
+                    <div class="flip__card__back">
+                        <p class="flip__card__back__text"> 
+                            Simboliza abundantes bendiciones atraídas por nuestras creencias y pensamientos, a menudo sigue a cambios difíciles o eventos traumáticos</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="flip__card">
+                <div class="flip__card__inner">
+                    <picture> <!-- this is a duplicate image to avoid collision with 3D effect (is hidden with a class)-->
+                        <!-- NOTE: It is not necessary for my the cards to use <source>, because they will not change their position both vertically and horizontally. 
+                            Reducing them would only make them lose resolution. However, if it adapts to large screens, it would be necessary. 
+                            Here is an example from 1440px. -->
+                        <source class="hidden" media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-19.webp">
+                        <img loading="lazy" alt="hidden" class="hidden" src="img/MuseoTarot_cartas_1920px-19.webp">
+                    </picture>
+                    <div class="flip__card__front">
+                        <picture>
+                            <!-- Original front Img -->
+                            <source media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-19.webp">
+                            <img loading="lazy" src="img/MuseoTarot_cartas_1920px-19.webp" alt="Carta TheMoon" title="TheMoon">
+                        </picture>
+                    </div>
+                    <div class="flip__card__back">
+                        <p class="flip__card__back__text">
+                            Advierte sobre dejar que la imaginación y emociones dominen tu vida, enfrenta la realidad, confía en tu intuición para encontrar liberación de lo que te ata</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="flip__card">
+                <div class="flip__card__inner">
+                    <picture> <!-- this is a duplicate image to avoid collision with 3D effect (is hidden with a class)-->
+                        <!-- NOTE: It is not necessary for my the cards to use <source>, because they will not change their position both vertically and horizontally. 
+                            Reducing them would only make them lose resolution. However, if it adapts to large screens, it would be necessary. 
+                            Here is an example from 1440px. -->
+                        <source class="hidden" media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-20.webp">
+                        <img loading="lazy" alt="hidden" class="hidden" src="img/MuseoTarot_cartas_1920px-20.webp">
+                    </picture>
+                    <div class="flip__card__front">
+                        <picture>
+                            <!-- Original front Img -->
+                            <source media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-20.webp">
+                            <img loading="lazy" src="img/MuseoTarot_cartas_1920px-20.webp" alt="Carta TheSun" title="TheSun">
+                        </picture>
+                    </div>
+                    <div class="flip__card__back">
+                        <p class="flip__card__back__text"> 
+                            Indica mejoras y positividad después de tiempos difíciles, Nos anima a ver el lado positivo y aprender de las dificultades como herramientas de crecimiento</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flip__card">
+                <div class="flip__card__inner">
+                    <picture> <!-- this is a duplicate image to avoid collision with 3D effect (is hidden with a class)-->
+                        <!-- NOTE: It is not necessary for my the cards to use <source>, because they will not change their position both vertically and horizontally. 
+                            Reducing them would only make them lose resolution. However, if it adapts to large screens, it would be necessary. 
+                            Here is an example from 1440px. -->
+                        <source class="hidden" media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-21.webp">
+                        <img loading="lazy" alt="hidden" class="hidden" src="img/MuseoTarot_cartas_1920px-21.webp">
+                    </picture>
+                    <div class="flip__card__front">
+                        <picture>
+                            <!-- Original front Img -->
+                            <source media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-21.webp">
+                            <img loading="lazy" src="img/MuseoTarot_cartas_1920px-21.webp" alt="Carta Judgement" title="Judgement">
+                        </picture>
+                    </div>
+                    <div class="flip__card__back">
+                        <p class="flip__card__back__text"> 
+                            Reflexiona si tus acciones se alinean con tus valores y propósito, Tómate tiempo para pensar antes de seguir adelante; será beneficioso en última instancia</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="flip__card">
+                <div class="flip__card__inner">
+                    <picture> <!-- this is a duplicate image to avoid collision with 3D effect (is hidden with a class)-->
+                        <!-- NOTE: It is not necessary for my the cards to use <source>, because they will not change their position both vertically and horizontally. 
+                            Reducing them would only make them lose resolution. However, if it adapts to large screens, it would be necessary. 
+                            Here is an example from 1440px. -->
+                        <source class="hidden" media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-22.webp">
+                        <img loading="lazy" alt="hidden" class="hidden" src="img/MuseoTarot_cartas_1920px-22.webp">
+                    </picture>
+                    <div class="flip__card__front">
+                        <picture>
+                            <!-- Original front Img -->
+                            <source media="(min-width: 1440px)" srcset="img/MuseoTarot_cartas_1440px-22.webp">
+                            <img loading="lazy" src="img/MuseoTarot_cartas_1920px-22.webp" alt="Carta TheWorld" title="TheWorld">
+                        </picture>
+                    </div>
+                    <div class="flip__card__back">
+                        <p class="flip__card__back__text"> 
+                            Significa éxito y logro, tu proyecto ha concluido, alcanzando tus metas a pesar de las dificultades, estás en el lugar adecuado, haciendo lo correcto</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- This is the end oF my HTML body (my cards section) -->
+
+    <!-- This is my HTML footer -->
+
+        <footer class="footer">
+            <div class="footer__logo">
+                <a href="index.html" title="Intro"><img class="footer__img" src="./vectores/MuseoTarot_Logo.svg" alt="logo" title="MuseoTarotLogo"></a>
+            </div>
+
+            <nav class="footer__menuContainer">
+                <menu class="footer__menu">
+                    <li><a href="abaoutus.html" title="About Us">About Us</a></li>
+                    <li><a href="contacus.html" title="Contact Us">Contact Us</a></li>
+                </menu>
+            </nav>
+
+        </footer>
+
+    <!-- This is the end of my HTML footer -->
+
+    </div> 
+</body>
+</html>

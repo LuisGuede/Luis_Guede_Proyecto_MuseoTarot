@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museo Tarot</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/fun.js" defer></script>
+    <!-- this is my icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.webp">
+    <link rel="icon" type="vectores/svg" sizes="32x32" href="img/favicon-32x32.webp">
+    <link rel="icon" type="vectores/svg" sizes="16x16" href="img/favicon-16x16.webp">
+</head>
+
+<body>
+
+    <!-- This is my HTML Header -->
+
+    <header class="header">
+        <div class="header__logo">
+            <a href="home.html" title="Home"><img class="header__img" src="./vectores/MuseoTarot_Logo.svg" alt="logo" title="MuseoTarotLogo"></a> 
+        </div>
+
+        <nav class="header__menuContainer">
+            <menu class="header__menu">
+                <li><a href="home.html" title="Home">Home</a></li>
+                <li><a href="abaoutus.html" title="About Us">About Us</a></li>
+                <li><a href="contacus.html" title="Contact Us">Contact Us</a></li>
+            </menu>
+        </nav>
+
+        <!-- this is my responsive HTML Header button (hambunger)-->
+        <button class="header__responsiveMenue__Button">
+            <img src="./vectores/Hamburger_menu.svg" alt="Hamburger" title="Hamburger">
+        </button>
+    </header>
+
+    <!-- this is my responsive HTML Header colose button -->
+    <div class="header__responsiveMenue">
+        <button class="header__responsiveMenue__close">
+            <img src="./vectores/close_button.svg" alt="close button" title="close button">
+        </button>
+        <nav>
+            <menu class="header__responsiveMenue__menu">
+                <li><a href="home.html" title="Home">Home</a></li>
+                <li><a href="abaoutus.html" title="About Us">About Us</a></li>
+                <li><a href="contacus.html" title="Contact Us">Contact Us</a></li>
+            </menu>
+        </nav>
+    </div>
+
+    <!-- This is the end of my HTML Header -->
+
+    <!-- This is my HTML body abaut us -->
+
+    <div class="abautUs__container">
+
+        <section class="container__info__left">
+            <div class="text__info__img">
+                <!-- Unlike the cards, here I can make an example of the use of <picture> and <source> -->
+                <picture>
+                    <source media="(min-width: 1440px)" srcset="img/MuseoTarot_abaoutUs-02.webp">
+                    <source media="(min-width: 1025px)" srcset="img/MuseoTarot_abaoutUs-02.webp">
+                    <source media="(min-width: 768px)" srcset="img/MuseoTarot_abaoutUs-03.webp">
+                    <source media="(min-width: 606px)" srcset="img/MuseoTarot_abaoutUs-03.webp">
+                    <source media="(min-width: 425px)" srcset="img/MuseoTarot_abaoutUs-03.webp">
+                    <source media="(min-width: 378px)" srcset="img/MuseoTarot_abaoutUs-03.webp">
+                    <source media="(min-width: 320px)" srcset="img/MuseoTarot_abaoutUs-03.webp">
+                    <img loading="lazy" src="img/MuseoTarot_abaoutUs-01.webp" alt="Tarotista" title="Tarotista">
+                </picture>
+            </div>
+
+            <div class="text__info__content text__info__block">
+                <h3>Abaut US</h3>
+                <h2>Somos Museo Tarot</h2>
+                <p class="abautUs__infoText">
+                    En un rincón acogedor y misterioso de la ciudad, se encuentra un grupo selecto de tarotistas que han unido sus habilidades para ofrecer servicios de lectura de tarot única y excepcional. Nuestro equipo de expertos en el arte adivinatorio se ha ganado la reputación de ser no solo precisos, sino también intuitivos y compasivos.</p>
+                <div class="abautUs__button__container">
+                    <a class="abautUs__infoText__btn" href="contacus.html" title="ContactUs">Contact Us</a>
+                </div>
+            </div>
+            
+        </section>
+
+        <section class="container services__block">
+
+            <div class="services__block__row">
+                <div class="services__block__row__block big">
+                    <h3>Lugar</h3>
+                    <p class="abautUs__infoText">
+                        El lugar donde operan emana una atmósfera especial, con velas parpadeantes, incienso aromático y una música suave que crea un ambiente propicio para la conexión espiritual.</p>
+                </div>
+
+                <div class="services__block__row__block">
+                    <h3>Operación</h3>
+                    <p class="abautUs__infoText">
+                        Los tarotistas, vestidos con atuendos que reflejan la esencia mística del lugar, reciben a los clientes con calidez y respeto. Antes de comenzar la lectura, realizan una breve consulta para entender las necesidades específicas del consultante y ajustar el enfoque de la lectura en consecuencia.</p>
+                </div>
+
+                <div class="services__block__row__block">
+                    <h3>Profesionalismo</h3>
+                    <p class="abautUs__infoText">
+                        Este grupo se distingue por su ética profesional y su enfoque orientado a brindar orientación y apoyo más que predecir el futuro de manera fatalista.</p>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- This is the end oF my HTML body abaut us -->
+
+    <!-- This is my HTML footer -->
+
+        <footer class="footer">
+            <div class="footer__logo">
+                <a href="index.html" title="Intro"><img class="footer__img" src="./vectores/MuseoTarot_Logo.svg" alt="logo" title="MuseoTarotLogo"></a>
+            </div>
+
+            <nav class="footer__menuContainer">
+                <menu class="footer__menu">
+                    <li><a href="abaoutus.html" title="About Us">About Us</a></li>
+                    <li><a href="contacus.html" title="Contact Us">Contact Us</a></li>
+                </menu>
+            </nav>
+
+        </footer>
+
+    <!-- This is the end of my HTML footer -->
+
+</body>
+</html>

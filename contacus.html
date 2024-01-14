@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museo Tarot</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/fun.js" defer></script>
+    <!-- this is my icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.webp">
+    <link rel="icon" type="vectores/svg" sizes="32x32" href="img/favicon-32x32.webp">
+    <link rel="icon" type="vectores/svg" sizes="16x16" href="img/favicon-16x16.webp">
+</head>
+
+<body>
+
+    <!-- This is my HTML Header -->
+
+    <header class="header">
+        <div class="header__logo">
+           <a href="home.html" title="Home"><img class="header__img" src="./vectores/MuseoTarot_Logo.svg" alt="logo" title="MuseoTarotLogo"></a> 
+        </div>
+
+        <nav class="header__menuContainer">
+            <ul class="header__menu">
+                <li><a href="home.html" title="Home">Home</a></li>
+                <li><a href="abaoutus.html" title="About Us">About Us</a></li>
+                <li><a href="contacus.html" title="Contact Us">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <!-- this is my responsive HTML Header button (hambunger)-->
+        <button class="header__responsiveMenue__Button">
+            <img src="./vectores/Hamburger_menu.svg" alt="Hamburger" title="Hamburger">
+        </button>
+    </header>
+
+    <!-- this is my responsive HTML Header colose button -->
+    <div class="header__responsiveMenue">
+        <button class="header__responsiveMenue__close">
+            <img src="./vectores/close_button.svg" alt="close button" title="close button">
+        </button>
+        <nav>
+            <menu class="header__responsiveMenue__menu">
+                <li><a href="home.html" title="Home">Home</a></li>
+                <li><a href="abaoutus.html" title="About Us">About Us</a></li>
+                <li><a href="contacus.html" title="Contact Us">Contact Us</a></li>
+            </menu>
+        </nav>
+    </div>
+
+<!-- This is the end of my HTML Header -->
+
+<!-- This is my HTML contactUs -->
+
+<div class="contactUs__contenedor">
+        
+    <div class="contactUs__title__contenedor">
+        <h1 class="contactUs__title">Todo comienza con una vision</h1>
+        <p class="contactUs__text">Cultivan una conexión emocional duradera de por vida.</p>
+    </div>
+
+    <div class="columna columna__one">
+        <form action="#" method="post">
+            <h3 class="columna__one__text">Contact Us</h3>
+        
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="telefono">Número de Teléfono (opcional):</label>
+            <input type="tel" id="telefono" name="telefono">
+        
+            <label for="tipoLectura">Tipo de Lectura de Tarot:</label>
+            <select id="tipoLectura" name="tipoLectura" required>
+              <option value="" disabled selected>Selecciona un tipo de lectura</option>
+              <option value="marsella">Tarot de Marsella</option>
+              <option value="egipcio">Tarot Egipcio</option>
+              <option value="psicologico">Tarot Psicológico</option>
+              <option value="otro">Otro</option>
+            </select>
+
+            <label for="enfoqueLectura">Enfoque de la Lectura:</label>
+            <select id="enfoqueLectura" name="enfoqueLectura" required>
+              <option value="" disabled selected>Selecciona un enfoque de lectura</option>
+              <option value="general">General</option>
+              <option value="amor">Amor y Relaciones</option>
+              <option value="carrera">Carrera y Finanzas</option>
+              <option value="espiritualidad">Espiritualidad</option>
+              <option value="otro">Otro</option>
+            </select>
+        
+            <label for="modalidadConsulta">Modalidad de Consulta:</label>
+            <select id="modalidadConsulta" name="modalidadConsulta" required>
+              <option value="" disabled selected>Selecciona una modalidad de consulta</option>
+              <option value="presencial">Presencial</option>
+              <option value="online">Online (video llamada)</option>
+              <option value="telefonica">Telefónica</option>
+              <option value="cualquiera">Cualquiera de las anteriores</option>
+            </select>
+        
+            <label for="fechaHora">Fecha y Hora Preferida:</label>
+            <input type="datetime-local" id="fechaHora" name="fechaHora" required>
+        
+            <label for="comentarios">Comentarios o Preguntas Adicionales:</label>
+            <textarea id="comentarios" name="comentarios"></textarea>
+        
+            <div class="checkbox__flex">
+                <label for="consentimiento">Acepto recibir comunicaciones relacionadas con la lectura de tarot:</label>
+                <input type="checkbox" class="consentimiento" id="consentimiento" name="consentimiento" required>
+            </div>
+
+            <button class="form__btn" title="Enviar" type="submit">Enviar Solicitud</button>
+            
+          </form>
+    
+    </div>
+
+    <div class="columna columna__two">
+        <h2 class="columna__two__text">¡Complete este formulario con la información y nos comunicaremos con usted pronto...</h2>
+    </div>
+
+    </div>
+
+    <!-- This is the end of my HTML contactUs -->
+
+    <!-- This is my HTML footer -->
+
+    <footer class="footer">
+        <div class="footer__logo">
+            <a href="index.html" title="Intro"><img class="footer__img" src="./vectores/MuseoTarot_Logo.svg" alt="logo" title="MuseoTarotLogo"></a>
+        </div>
+
+        <nav class="footer__menuContainer">
+            <menu class="footer__menu">
+                <li><a href="abaoutus.html" title="About Us">About Us</a></li>
+                <li><a href="contacus.html" title="Contact Us">Contact Us</a></li>
+            </menu>
+        </nav>
+
+    </footer>
+
+<!-- This is the end of my HTML footer -->
+  
+
+    
+</body>
+
+</html>
